@@ -1,32 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i&display=swap')
 
+font_one = unquote("'Montserrat', sans-serif")
+color_one = #000002
+color1_bg = #f8f4f0 // unquote($color1_bg)
+color2_bg = unquote($color2_bg)
 /**
-* Mixins
-*/
-
+ * Mixins
+ */
 /**
-* Mixin - Font-weight
-*/
-light = 300
-regular = 400
-medium = 500
-semibold = 600
-bold = 700
-
-
-
+ * Mixin - Font-weight
+ */
+light = 400 // 300
+regular = 500 // 400
+medium = 600 // 500
+semibold = 700 // 600
+bold = 800 // 700
 /**
-* Mixin - Viewport
-*/
-viewport = 1160px
-
-
+ * Mixin - Viewport
+ */
+viewport = 1170px
 /**
-* Mixin - Responsive
-* @media (max-width screen-sm-min)
-* @media (max-width screen-md-min)
-* @media (max-width screen-lg-min)
-*/
-// Smaller devices (phones, 320px and down)
+ * Mixin - Responsive
+ * @media (max-width screen-sm-min)
+ * @media (max-width screen-md-min)
+ * @media (max-width screen-lg-min)
+ */
 screen-xxs = 320px
 // Small devices (phones, 568px and down)
 screen-xs = 568px
@@ -36,61 +34,90 @@ screen-sm = 768px
 screen-md = 992px
 // Medium devices (desktops, 1200px and down)
 screen-lg = 1200px
-
+mobile = unquote('only screen and (max-width: 992px)')
+desktop = unquote('only screen and (min-width: 993px)')
 
 /*
-* Global
-* Elementos globais que podem ser extendidos ao longo do documento
-*/
+ * Global
+ * Elementos globais que podem ser extendidos ao longo do documento
+ */
 .container
-  min-width: 0
-  max-width: viewport
-  margin 0 auto
-  width: auto
-
+    min-width: 0
+    max-width: viewport
+    margin: 0 auto
+    width: auto
 
 /*
-* Base
-* Estilo base do elementos do Html
-*/
+ * Base
+ * Estilo base do elementos do Html
+ */
+html
+    background: #ffffff
+
 body
-  font-family: 'Exo 2', sans-serif
+    font-family: font_one
 
-
-/*
-* Components
-* Componentes que se adaptam ao contexto
-*/
+@media desktop
+    .wrapper-container
+        padding-top: 294px
 
 /*
-* Component - Menssagens
-*/
+ * Components
+ * Componentes que se adaptam ao contexto
+ */
+/*
+ * Component - Menssagens
+ */
 .messages
-  > li
-    display block
-    padding 10px 20px
-    margin-bottom 20px
-    font-size 14px
-  .success-msg
-    border 1px solid #2baf60
-    background #c8efc0
-    color #1d904b
-  .error-msg
-    border 1px solid #d92100
-    background #ffdcdc
-    color #d92100
-  .notice-msg
-    border 1px solid #f7be07
-    background #f9f0d5
-    color #f7be07
+    > li
+        display: block
+        padding: 10px 20px
+        margin-bottom: 20px
+        font-size: 14px
+
+    .success-msg
+        border: 1px solid #2baf60
+        background: #c8efc0
+        color: #1d904b
+
+    .error-msg
+        border: 1px solid #d92100
+        background: #ffdcdc
+        color: #d92100
+
+    .notice-msg
+        border: 1px solid #f7be07
+        background: #f9f0d5
+        color: #f7be07
+
+input, select, textarea
+    box-shadow: none
+
+.owl-page span
+    background: color2_bg
 
 /*
-* State
-* Estado global do Layout
-*/
-
-
+ * State
+ * Estado global do Layout
+ */
 /*
-* Theme
-* Customização de components ou layout, hacks !importants e etc
-*/
+ * Theme
+ * Customização de components ou layout, hacks !importants e etc
+ */
+@import 'components/banner'
+@import 'components/header'
+@import 'components/footer'
+@import 'components/categories'
+@import 'components/search'
+@import 'components/logo'
+@import 'components/mycart'
+@import 'components/myaccount'
+@import 'components/rulers-discount'
+@import 'components/banner-rulers'
+@import 'components/products'
+@import 'components/prices'
+@import 'components/no-date'
+@import 'components/testimony'
+@import 'components/instagram'
+// Pages
+@import 'pages/home'

@@ -1,0 +1,190 @@
+.products
+    &__title
+        font-size: 15px
+        font-weight: light
+        line-height: 1.2
+        letter-spacing: 5px
+        text-transform: uppercase
+        color: color_one
+
+        strong
+            display: block
+            font-size: 28px
+            font-weight: bold
+
+    &__case
+        box-shadow: none
+
+    &__name
+        display: block
+        padding-bottom: 15px
+        font-size: 19px
+        font-weight: light
+        color: color_one
+
+    .owl
+        &-prev, &-next
+            width: 36px
+            height: 54px
+            border: solid 2px color2_bg
+            border-radius: 3px
+            box-shadow: none
+            background: #fff
+            display: flex
+            justify-content: center
+            align-items: center
+            opacity: 0.5
+
+            &:before
+                background: #fff
+
+        &-next
+            &:before
+                position: static
+                content: ''
+                width: 0
+                height: 0
+                border-left: solid 15px color2_bg
+                border-top: solid 15px transparent
+                border-bottom: solid 15px transparent
+
+        &-prev
+            &:before
+                position: static
+                content: ''
+                width: 0
+                height: 0
+                border-right: solid 15px color2_bg
+                border-top: solid 15px transparent
+                border-bottom: solid 15px transparent
+
+    &-block
+        padding-top: 30px
+        margin-top: 30px
+        box-shadow: inset 0 365px 0 #ddfedd
+
+        &__figure 
+            display: none 
+
+        .products
+            &__title 
+                text-align: right
+                padding-right: 25px
+
+            .owl-next 
+                top: -28px
+                right: 0
+
+            .owl-prev 
+                top: -28px
+                left: 0
+.cms-home
+    .products
+        &__title, &__list
+            max-width: viewport
+            margin: 0 auto
+
+        &__list
+            max-width: (viewport + 16)
+
+        &#news
+            margin-top: 70px
+
+            .owl-wrapper-outer
+                background: #fff
+
+
+
+@media desktop
+    .products
+        .owl-pagination
+            display: none
+        &__title
+            font-size: 25px
+            font-weight: light
+            line-height: 1.2
+            letter-spacing: 5px
+            text-transform: uppercase
+            color: color_one
+
+            strong
+                display: block
+                font-size: 48px
+                font-weight: bold
+
+        &__case
+            display: block
+            margin: 0 auto
+            padding: 2px
+            // max-width: 240px
+            background: #fff
+
+        &__item:hover
+            .products
+                &__case
+                    box-shadow: inset 0 0 0 2px color2_bg
+
+                &__name
+                    font-weight: bold
+
+            .regular-price
+                .label span, .price span
+                    font-weight: bold
+
+        &__main
+            padding: 0 20px
+
+    #news, #reader
+        .products
+            &__list
+                margin-top: 40px
+
+            &__title
+                position: relative
+
+                &:after
+                    content: ''
+                    position: absolute
+                    top: calc(100% - 30px)
+                    left: 0
+                    z-index: -1
+                    width: 100%
+                    height: 260px
+                    background: #f8f4f0
+
+    #news
+        .products
+            &__list
+                padding: 0 40px
+
+            &__case
+                max-width: 240px
+
+        .owl-next
+            top: -20px
+            right: 20px
+
+        .owl-prev
+            top: -20px
+            left: 20px
+
+    #reader
+        .products
+            &__title:after
+                box-shadow: 800px 0 0 #f8f4f0, -800px 0 0 #f8f4f0
+
+    .products
+        &-block
+
+            &__container 
+                display: flex 
+                max-width: viewport
+                margin: 0 auto
+
+                .products 
+                    flex: 1 1 auto
+                    min-width: 0
+
+            &__figure 
+                flex: 0 0 425px
+                display: block

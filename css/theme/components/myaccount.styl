@@ -1,0 +1,109 @@
+.myaccount
+    .header &
+        background: #fff
+        margin-left: 10px
+
+    .recaptcha
+        padding: 0
+
+    &__header
+        a
+            border-radius: 0
+            box-shadow: none
+
+            .ico
+                fill: color_one
+                width: 36px
+                height: 36px
+
+    &__content
+        box-shadow: none
+        border: 0
+
+        .title
+            font-size: 20px
+            font-weight: bold
+            text-align: left
+
+        .email-input, .password-input
+            height: 50px
+            border: 0
+            border-radius: 0
+            font-size: 14px
+            font-weight: bold
+            background: color1_bg
+            color: color_one
+
+            &::placeholder
+                color: #d0ceca
+                text-transform: uppercase
+
+            &:focus::placeholder
+                color: transparent
+
+        .fields
+            display: block
+
+    &__forgot
+        position: static
+        display: block
+        font-size: 12px
+        text-transform: uppercase
+        text-align: right
+        color: color_one
+        padding: 5px 0
+
+    &__login-btn
+        width: 100%
+        height: 50px
+        border: 0
+        border-radius: 0
+        font-size: 20px
+        font-weight: bold
+        text-transform: uppercase
+        padding-top: 10px
+        padding-bottom: 10px
+        box-shadow: none
+        background: color2_bg
+
+    &__register
+        border-top: 0
+        padding-top: 0
+        margin-top: 0
+
+        p, a
+            font-size: 12px
+            font-weight: bold
+            text-transform: uppercase
+            color: color_one
+            text-align: center
+
+    &__register-btn
+        display: none
+
+    &:hover
+        .myaccount__header a
+            background: none
+
+@media mobile
+    .myaccount
+        &__hide
+            color: color_one
+
+@media desktop
+    .myaccount
+        height: auto
+
+        &__header
+            a
+                display: block
+                width: auto
+                height: auto
+                text-align: center
+
+            .text
+                display: block
+                font-size: 12px
+                font-weight: regular
+                color: color_one
+                text-transform: uppercase

@@ -1,0 +1,69 @@
+color-label-old = color2_bg
+color-price-old = color2_bg
+color-label-special = color_one
+color-price-special = color_one
+color-label-preco-avista = color_one
+color-price-preco-avista = color_one
+font-label-old = light 19px font_one
+font-price-old = light 19px font_one
+font-label-special = light 25px font_one
+font-price-special = light 25px font_one
+font-label-preco-avista = light 16px font_one
+font-price-preco-avista = light 16px font_one
+
+.price-box
+    margin-bottom: 0
+
+    .old-price
+        margin-bottom: 0
+        text-decoration: line-through
+
+        .label span
+            font: font-label-old
+            color: color-label-old
+
+        .price
+            text-decoration: none
+
+            span
+                font: font-price-old
+                color: color-price-old
+
+    .regular-price, .special-price, .minimal-price
+        .label span
+            font: font-label-special
+            color: color-label-special
+
+        .price
+            line-height: 1
+
+            span
+                font: font-price-special
+                color: color-price-special
+                line-height: 1
+
+.price-box-avista
+    margin-bottom: 0
+    display: none
+
+    .label span
+        font: font-label-preco-avista
+        color: color-label-preco-avista
+
+.price-box-parcelado
+    .preco-parcelado, .preco-parcelado-sem-juros
+        padding-top: 0
+        margin-top: 5px
+        font-size: 16px
+        font-weight: light
+        color: color_one
+        line-height: 1
+
+        &:before
+            content: 'até'
+
+        .num, .value, .s-juros
+            span
+                font-size: 16px
+                font-weight: bold
+                color: color_one

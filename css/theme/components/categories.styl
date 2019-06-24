@@ -1,0 +1,126 @@
+.categories
+    background: color1_bg
+
+@media mobile
+    .categories
+        &__show, &__hide
+            color: color_one
+            background: #fff
+
+        &--mobi
+            .all-a
+                &--0, &--1
+                    color: color_one
+
+    .all-li--0
+        padding-bottom: 0
+
+        &.parent
+            position: relative
+
+            &:after
+                icon('\f054')
+                position: absolute
+                top: 0
+                right: 0
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 45px
+                height: 46px
+                background: rgba(0, 0, 0, 0.1)
+                cursor: pointer
+                transition: all 0.2s ease
+
+        &.on:after
+            transform: rotate(90deg)
+
+    .all-ul--1
+        display: none
+
+        .all-li--0.on &
+            display: block
+
+@media desktop
+    .categories
+        transition: all 0.2s ease
+
+        &__all
+            display: none
+
+        .ul--0
+            max-width: viewport
+
+        .a--0
+            height: 50px
+            font-size: 12px
+            font-weight: regular
+            color: color_one
+            text-transform: uppercase
+
+            span
+                white-space: nowrap
+
+        .a--1
+            font-size: 18px
+            color: color_one
+
+        .li--0:hover
+            .a--0
+                color: color_one
+                background: #fff
+
+        &--justify
+            .a--1:hover
+                box-shadow: none
+                font-weight: bold
+                text-decoration: underline
+
+            .box--1
+                border: 0
+                box-shadow: none
+
+        .scrolling--down &
+            position: relative
+            z-index: 1
+            transform: translateY(-49px)
+            pointer-events: none
+
+    .categories__products, .categories__block
+        border-left: 0
+
+        .price-box-parcelado, .product-rate, .minimal-price .label, .regular-price .label, .special-price .label
+            display: none
+
+        .special-price, .minimal-price, .regular-price
+            .price span
+                color: color2_bg !important
+
+        > .title
+            display: none
+
+        .products__item:hover
+            .products__case
+                box-shadow: none
+
+        .products__case
+            display: flex
+            justify-content: space-between
+            align-items: center
+            flex-direction: row
+
+        .product__header
+            flex: 0 0 180px
+
+        .product__name
+            font-size: 16px
+            font-weight: bold
+            text-decoration: underline
+
+        .product__main
+            a:hover
+                color: color_one
+
+    .categories__products .products__item, .categories__products.carrossel
+        width: 425px !important
+        max-width: none

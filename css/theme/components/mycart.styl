@@ -1,0 +1,55 @@
+.mycart
+    font-size: 14px
+
+    .header &
+        margin-left: 10px
+
+    &__header
+        background: #fff
+
+        a
+            border-radius: 0
+            box-shadow: none
+
+        .ico
+            fill: color_one !important
+            width: 33px
+            height: 37px
+
+        .qtd
+            display: none
+
+    &__content
+        box-shadow: none
+        border: 0
+
+    &:hover
+        .mycart__header a
+            background: none
+
+@media mobile
+    .mycart
+        &__hide
+            color: color_one
+
+@media desktop
+    .mycart
+        height: auto
+
+        &__header
+            a
+                display: block
+                width: auto
+                height: auto
+                text-align: center
+
+            .text
+                display: block
+                font-size: 12px
+                font-weight: regular
+                color: color_one
+                text-transform: uppercase
+
+    .header
+        .mycart
+            margin-right: 20px

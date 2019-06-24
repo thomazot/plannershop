@@ -1,0 +1,180 @@
+
+.footer
+    &, a
+        color: color_one
+
+    .newsletter
+        background: #ddfedd
+
+        .title
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            color: color_one
+            font-size: 20px
+            text-transform: uppercase
+            letter-spacing: 5px
+            margin-top: -27px
+
+            .ico
+                width: 42px
+                height: 23px
+
+        .description
+            color: color_one
+            font-size: 12px
+            font-weight: light
+            letter-spacing: 1px
+
+        input
+            height: 25px !important
+            border: 0
+            border-bottom: solid 1px color_one
+            border-radius: 0
+            background: none
+            box-shadow: none
+            padding: 0 5px
+            font-size: 15px
+            font-weight: bold
+            text-transform: uppercase
+            letter-spacing: 2px
+            margin-bottom: 20px
+
+            &::placeholder
+                color: color_one
+
+        &__btn
+            font-size: 12px
+            font-weight: bold
+            text-transform: uppercase
+            color: #fff
+            background: color_one
+            border-radius: 0
+
+    .socials
+        margin-bottom: 50px
+
+        &__title
+            font-size: 20px
+            font-weight: bold
+            text-transform: uppercase
+            letter-spacing: 5px
+
+        &__list
+            display: flex
+            flex-wrap: nowrap
+            background: #fae3dd
+            padding-top: 20px
+
+    &-container
+        background: none
+
+    &__title
+        font-size: 15px
+        font-weight: bold
+        text-transform: uppercase
+        letter-spacing: 4px
+        height: 46px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+    &__content
+        padding: 20px 0
+        background: #f9f9f9
+        box-shadow: 16px 0 0 #f9f9f9, -16px 0 0 #f9f9f9
+
+    .mymenu .a--0
+        font-size: 15px
+        font-weight: light
+
+        &:hover
+            font-weight: bold
+            text-decoration: underline
+
+    a[href*='not']
+        pointer-events: none
+
+@media desktop
+    .news-social
+        &__container
+            display: flex
+            max-width: viewport
+            margin: 0 auto
+
+        &__item--social
+            flex: 0 0 445px
+            order: -1
+
+            .socials__list
+                padding: 30px 0 20px
+                box-shadow: 400px 0 0 #fae3dd, 800px 0 0 #fae3dd, 1200px 0 0 #fae3dd
+
+    .footer .newsletter
+        padding-left: 50px
+        padding-right: 50px
+
+    .newsletter__name, .newsletter__email
+        flex: 0 0 100%
+
+    .newsletter__submit
+        margin-top: -28px
+        text-align: right
+        margin-bottom: 30px
+        position: relative
+        z-index: 10
+
+        .btn
+            display: inline-block
+            max-width: 135px
+
+    .footer .newsletter
+        box-shadow: none
+
+    .news-social__item--news
+        flex: 1 1 auto
+        min-width: 0
+
+    .footer
+        .socials__list
+            margin: 0
+            padding-left: 30px
+
+        .socials__title
+            font-size: 36px
+            max-width: 270px
+
+        .newsletter .title
+            margin-top: -35px
+            font-size: 36px
+
+            .ico
+                width: 62px
+                height: 43px
+
+    .footer
+        &__row
+            position: relative
+            display: flex
+            max-width: viewport
+            margin: 0 auto
+
+            &:before
+                content: ''
+                position: absolute
+                z-index: 1
+                top: 46px
+                bottom: 0
+                left: 0
+                width: 100%
+                background: #f9f9f9
+                box-shadow: 800px 0 0 #f9f9f9
+
+            .footer__title
+                white-space: nowrap
+
+        &__box
+            position: relative
+            z-index: 2
+            padding: 0 20px
+            box-shadow: none

@@ -1,0 +1,56 @@
+.search
+    &__button
+        color: color_one
+        background: #fff
+        box-shadow: none
+
+        &.btn .ico
+            fill: color_one
+
+    .header &__input
+        border: 0
+        padding-left: 0
+        font-size: 12px
+
+        &::placeholder
+            color: color_one
+
+        &:focus::placeholder
+            color: transparent
+
+@media (max-width: 568px)
+    .header
+        .search.on
+            .search__input
+                color: color_one
+
+    .search
+        &__hide
+            color: color_one
+
+@media desktop
+    .header
+        .search
+            flex: 0 1 250px
+            order: -1
+            margin-left: 0
+            border-bottom: solid 1px color_one
+
+            &__input
+                line-height: 1
+                height: auto
+                padding: 3px 0
+
+            &__form
+                display: flex
+                justify-content: space-between
+                align-items: flex-end
+
+    .search
+        &__button
+            padding: 0
+            margin-bottom: 6px
+
+            &.btn .ico
+                width: 35px
+                height: 35px

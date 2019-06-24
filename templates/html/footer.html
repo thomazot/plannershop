@@ -1,0 +1,47 @@
+<div class="news-social">
+    <div class="news-social__container">
+        <div class="news-social__item news-social__item--news">
+            {{widget type="interface/widget_newsletter" template="interface/widgets/newsletter.phtml" identificador="fnews" texto="<div class='title'>Planner news <svg class='ico'><use xlink:href='#z-mail'></use></svg></div><div class='description'>Cadastre o seu e-mail e fique por dentro de nossas novidades.</div>" label_email="E-mail:" placeholder_email="E-MAIL" texto_botao="Cadastrar" exibir_nome="1" label_nome="Nome:" placeholder_nome="NOME"}}
+        </div>
+        <div class="news-social__item news-social__item--social">
+            {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="fsocial" titulo="Redes Sociais" redes="all"}}
+        </div>
+    </div>
+</div>
+
+<div class="footer__row">
+    <div class="footer__box footer__box--information">
+        <h3 class="footer__title">Informações</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="footer-informations"}}
+        </div>
+    </div>
+
+    <div class="footer__box footer__box--info">
+        <h3 class="footer__title">Info</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="footer-info"}}
+        </div>
+    </div>
+
+    <div class="footer__box footer__box--myaccount">
+        <h3 class="footer__title">Minha Conta</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="footer-account"}}
+        </div>
+    </div>
+
+    <div class="footer__box footer__box--myaccount">
+        <h3 class="footer__title">Contato</h3>
+        <div class="footer__content">
+            {{block type="menubuilder/output" identifier="footer-contact"}}
+        </div>
+    </div>
+
+    <div class="footer__box footer__box--payments">
+        <h3 class="footer__title">Pagamento</h3>
+        <div class="footer__content">
+            {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="pagtos_footer" pagtos="all"}}
+        </div>
+    </div>
+</div>

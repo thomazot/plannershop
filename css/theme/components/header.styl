@@ -1,0 +1,23 @@
+.header-container
+    background: #fff
+
+@media desktop
+    .header
+        position: relative
+        z-index: 2
+        width: 100%
+        max-width: viewport
+        transition: all 0.2s ease
+        background: #fff
+        box-shadow: 800px 0 0 #fff, -800px 0 0 #fff
+
+        &-container
+            transition: all 0.2s ease
+
+        .scrolling &
+            padding-top: 0
+            margin-bottom: 0 !important
+
+        .scrolling &-container
+            max-height: 84px
+            transform: translateY(-52px)

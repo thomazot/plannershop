@@ -1,6 +1,6 @@
 {
   "protocol": "http",
-  "host": "test.loja.biz",
+  "host": "plannershop.loja.biz",
   "browsers": [">1%"],
   "pxtorem": {
     "rootValue": 16,
