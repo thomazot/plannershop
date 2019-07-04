@@ -3,6 +3,9 @@
     &, a
         color: color_one
 
+        &:hover
+            color: darken(color_one, 20%)
+
     .newsletter
         background: #ddfedd
 
@@ -140,6 +143,9 @@
             margin: 0
             padding-left: 30px
 
+            img
+                width: 60px
+
         .socials__title
             font-size: 36px
             max-width: 270px
@@ -153,11 +159,22 @@
                 height: 43px
 
     .footer
+        &__copyright
+            text-align: center
+            padding: 20px 0
+            font-size: 12px
+            max-width: 900px
+            margin: 0 auto
+
         &__row
             position: relative
             display: flex
             max-width: viewport
             margin: 0 auto
+
+            &:nth-child(3)
+                &:before
+                    display: none
 
             &:before
                 content: ''

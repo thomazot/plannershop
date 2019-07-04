@@ -769,7 +769,7 @@ function default_carrossel_produtos() {
 
                 if (box.attr('id') === 'news' || box.attr('id') === 'newblock') {
                     $j(el).owlCarousel({
-                        navigation: false,
+                        navigation: true,
                         navigationText: ['?', '?'],
                         items: 3,
                         itemsCustom: [
@@ -1176,7 +1176,7 @@ $j.fn.neonTheme.custom = {
     default_categories_mini: true, // modo mini da inserção de Menu de Categorias
     default_categories_carrossel: true, // modo carrossel da inserção de Menu de Categorias
     default_carrossel_produtos: true, // carrossel padrão das Coleções de Produtos
-    default_carrossel_jointsales: true, // carrossel dos produtos do Compre Junto @compre-junto
+    default_carrossel_jointsales: false, // carrossel dos produtos do Compre Junto @compre-junto
     default_carrossel_brands: true, // modo carrossel da listagem de marcas
     default_dropFrom: true, // ativa o dropFrom para as inserções: Lista de Desejos, Meu Carrinho, Minha Conta, Menu de Categories e Busca com Filtros
     default_SVGs: true, // insere os ícones padrões do SVG sprite

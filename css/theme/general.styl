@@ -41,6 +41,14 @@ desktop = unquote('only screen and (min-width: 993px)')
  * Global
  * Elementos globais que podem ser extendidos ao longo do documento
  */
+.btn, button, input[type=button], input[type=reset], input[type=submit]
+    border-radius: 0
+    background: #f8f4f0
+    color: color_one
+
+.add-to-links a
+    border-radius: 0
+
 .container
     min-width: 0
     max-width: viewport
@@ -125,6 +133,26 @@ input, select, textarea
 .product-image-gallery, .product-image-thumbs .thumb-link
     box-shadow: none
 
-.tabs__content, .tabs__tab, .tabs__tab.on
+.tabs__content, .tabs__tab, .tabs__tab.on, .tabs
     border: 0
-    background: #f8f4f0
+    background: #f9f9f9
+
+.prod__img
+    flex: 0 0 45%
+
+.catalog-product-view .main-container
+    max-width: viewport
+
+.prod__short-desc
+    font-size: 16px
+    color: #555
+
+.jointsales__totals .price
+    color: color2_bg
+
+.jointsales__totals, .jointsales__payments, .jointsales__action
+    margin-top: 30px
+
+@media (min-width: 993px)
+    .tabs
+        box-shadow: 800px 0 0 #f9f9f9, -800px 0 0 #f9f9f9
